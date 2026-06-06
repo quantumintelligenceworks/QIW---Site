@@ -325,18 +325,19 @@
               transform var(--duration-base) var(--ease-out);
 }
 .contact-card:hover { border-color: rgba(163, 38, 56, 0.4); transform: translateY(-2px); }
-.contact-card .tag { color: var(--color-paper); }   /* was red (~2.6:1, fails AA on #111) — red reserved for CTAs */
+.contact-card .tag { color: var(--color-paper); display: block; }   /* label always above the value; was red (~2.6:1, fails AA) — red reserved for CTAs */
 .contact-card a {
   display: inline-block;
+  max-width: 100%;
   margin-top: var(--space-4);
   font-family: var(--font-display);
-  font-size: var(--text-2xl);
+  font-size: clamp(1.125rem, 5vw, var(--text-2xl));   /* scales down so long email never clips on mobile */
   font-weight: var(--weight-semibold);
   color: var(--color-paper);
   letter-spacing: var(--tracking-tight);
   border-bottom: 1px solid rgba(245, 245, 242, 0.35);
   transition: border-color var(--duration-base) var(--ease-out);
-  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 .contact-card a:hover { border-color: var(--color-paper); }
 .contact-card p { margin-top: var(--space-3); font-size: var(--text-base); }
