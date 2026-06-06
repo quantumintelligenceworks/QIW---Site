@@ -103,8 +103,8 @@
   background: linear-gradient(180deg, var(--color-black) 0%, var(--color-ink) 100%);
   padding-block: var(--space-16) var(--space-12);
 }
-.hero__grid { display: grid; gap: var(--space-12); align-items: center; }
-.hero__art { order: -1; }            /* crest first on mobile */
+/* Text-first hero. Crest is a small badge above the headline, not a half-screen element. */
+.hero__inner { max-width: 760px; }
 .hero h1 {
   font-size: var(--text-hero);
   margin-top: var(--space-4);
@@ -136,8 +136,6 @@
 
 @media (min-width: 900px) {
   .hero { padding-block: var(--space-24) var(--space-16); }
-  .hero__grid { grid-template-columns: 1.15fr 0.85fr; gap: var(--space-16); }
-  .hero__art { order: 0; }
 }
 
 /* ── Crest medallion (single intentional light component) ── */
@@ -161,6 +159,16 @@
   border: 1px solid rgba(0, 58, 43, 0.22);
 }
 .medallion img { width: 84%; height: 84%; object-fit: contain; }
+
+/* Small crest badge — used in the hero so the mark is an accent, not the focus */
+.medallion--sm {
+  width: 104px;
+  justify-self: start;
+  margin-bottom: var(--space-6);
+  box-shadow: 0 0 0 1px rgba(0, 58, 43, 0.45),
+              0 10px 24px -12px rgba(0, 0, 0, 0.85);
+}
+.medallion--sm::after { inset: 6px; }
 
 /* ── Generic section head ───────────────────────────────── */
 .section-head { max-width: 60ch; }
