@@ -229,7 +229,7 @@
   font-size: var(--text-sm);
   font-weight: var(--weight-semibold);
   letter-spacing: var(--tracking-wide);
-  color: var(--color-red);
+  color: var(--color-paper);   /* was red (2.73:1, fails AA) — red reserved for CTAs per design-system */
 }
 .step h3 { font-size: var(--text-xl); margin-top: var(--space-3); }
 .step p { margin-top: var(--space-3); font-size: var(--text-base); }
@@ -302,7 +302,7 @@
               transform var(--duration-base) var(--ease-out);
 }
 .contact-card:hover { border-color: rgba(163, 38, 56, 0.4); transform: translateY(-2px); }
-.contact-card .tag { color: var(--color-red); }
+.contact-card .tag { color: var(--color-paper); }   /* was red (~2.6:1, fails AA on #111) — red reserved for CTAs */
 .contact-card a {
   display: inline-block;
   margin-top: var(--space-4);
@@ -353,4 +353,4 @@
 .footer__meta a:hover { color: var(--color-paper); }
 .footer__links { display: flex; gap: var(--space-6); margin-top: var(--space-4); }
 .footer__links a { font-size: var(--text-sm); color: var(--text-muted); transition: color var(--duration-base) var(--ease-out); }
-.footer__links a:hover { color: var(--color-paper); }
+.footer__links a:hover { color: var(--color-p
