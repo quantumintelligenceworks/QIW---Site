@@ -1,0 +1,86 @@
+/* tokens.css — transcribed verbatim from docs/design-system.md
+   QuantumAI design tokens. Three brand colors + two neutrals. Dark canvas only. */
+
+:root {
+  /* Brand */
+  --color-black:   #0A0A0A;   /* Quantum Black — backgrounds, heaviest surfaces */
+  --color-red:     #A32638;   /* Cardinal Red — primary CTA, accents, hover states */
+  --color-green:   #003A2B;   /* Hunter Green — secondary accent, section dividers */
+
+  /* Neutrals */
+  --color-paper:   #F5F5F2;   /* Light text on dark backgrounds, light-mode base */
+  --color-fog:     #C8C8C8;   /* Muted body text, borders, placeholder states */
+
+  /* Semantic aliases */
+  --bg-primary:    var(--color-black);
+  --bg-surface:    #111111;   /* Slightly lifted surfaces — cards, panels */
+  --text-primary:  var(--color-paper);
+  --text-muted:    var(--color-fog);
+  --accent:        var(--color-red);
+  --accent-alt:    var(--color-green);
+  --border:        rgba(200, 200, 200, 0.12);
+
+  /* Quantum Ink — deepest surface, used only for the subtle hero fade. Pure neutral (on-palette). */
+  --color-ink:     #111111;
+
+  /* ── Typography ─────────────────────────────────────────── */
+  /* Families */
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body:    'IBM Plex Sans', system-ui, sans-serif;
+
+  /* Scale (desktop) */
+  --text-xs:   0.75rem;    /* 12px */
+  --text-sm:   0.875rem;   /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.25rem;    /* 20px */
+  --text-2xl:  1.5rem;     /* 24px */
+  --text-3xl:  1.875rem;   /* 30px */
+  --text-4xl:  2.25rem;    /* 36px */
+  --text-5xl:  3rem;       /* 48px */
+  --text-hero: clamp(3rem, 7vw, 5.5rem);  /* Responsive hero headline */
+
+  /* Weights */
+  --weight-normal:   400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  /* Line heights */
+  --leading-tight:   1.1;
+  --leading-snug:    1.3;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.7;
+
+  /* Letter spacing */
+  --tracking-tight:  -0.03em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.08em;
+  --tracking-widest:  0.15em;
+
+  /* ── Spacing ────────────────────────────────────────────── */
+  --space-1:   0.25rem;   /* 4px */
+  --space-2:   0.5rem;    /* 8px */
+  --space-3:   0.75rem;   /* 12px */
+  --space-4:   1rem;      /* 16px */
+  --space-6:   1.5rem;    /* 24px */
+  --space-8:   2rem;      /* 32px */
+  --space-12:  3rem;      /* 48px */
+  --space-16:  4rem;      /* 64px */
+  --space-24:  6rem;      /* 96px */
+  --space-32:  8rem;      /* 128px */
+
+  /* Section padding */
+  --section-py-mobile:  var(--space-16);
+  --section-py-desktop: var(--space-32);
+
+  /* Max content width */
+  --max-width:        1200px;
+  --max-width-narrow: 720px;
+
+  /* ── Motion ─────────────────────────────────────────────── */
+  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+}

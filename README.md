@@ -1,0 +1,84 @@
+# QuantumAI — Production Website (v1)
+
+The public marketing site for **QuantumAI** (legal entity: Quantum Intelligence Works LLC).
+One job: turn a cold-email prospect into a 15-minute discovery call.
+
+**Live goal:** sell custom websites, infrastructure, and AI automation to local businesses
+across Chicago, West Palm Beach, and Northwest Indiana.
+
+---
+
+## What this is
+
+A hand-built **static site** — plain HTML + CSS, **no build step, no JavaScript framework**.
+Open any `.html` file in a browser and it works. This is intentional (see
+`../docs/ADR-stack-and-hosting.md`): zero toolchain = the most reliable way to host on
+GitHub Pages and the easiest for a non-developer to edit later.
+
+## Pages
+
+| File | URL | Purpose |
+|---|---|---|
+| `index.html` | `/` | Hero, problem, 3 services, how-it-works, CTA |
+| `services.html` | `/services.html` | Three service deep-dives + CTA |
+| `contact.html` | `/contact.html` | Direct contact — email + phone (no form in v1) |
+| `404.html` | any missing page | On-brand error page |
+
+## Services offered at launch
+
+1. **Startup Website Build** — Website & Web App
+2. **Tech Infrastructure Consulting** — Infrastructure & Integrations
+3. **AI Automation Agent** — Custom AI Models & Agents
+
+> These are the v1 offerings. Add or change services by editing the cards in `index.html`
+> and the deep-dives in `services.html`. See `../docs/LAUNCH_RUNBOOK.md`.
+
+## File layout
+
+```
+site/
+├── index.html          # homepage
+├── services.html       # services page
+├── contact.html        # contact page (email + phone)
+├── 404.html            # custom error page (styles inlined)
+├── robots.txt          # allows all, points to sitemap
+├── sitemap.xml         # 3 indexable URLs
+├── assets/
+│   ├── qiw-crest.png   # the heraldic crest (hero mark + OG fallback)
+│   └── og-image.svg    # 1200×630 social card master (export to PNG — see runbook)
+└── styles/
+    ├── tokens.css      # all design tokens (colors, type, spacing, motion) — from docs/design-system.md
+    ├── reset.css       # minimal reset
+    ├── global.css      # base element styles
+    └── components.css  # nav, hero, cards, footer, contact, etc.
+```
+
+## Brand rules (do not break)
+
+- **Colors:** Quantum Black `#0A0A0A`, Cardinal Red `#A32638`, Hunter Green `#003A2B`,
+  plus neutrals Paper `#F5F5F2` and Fog `#C8C8C8`. **No other colors.** Dark canvas only.
+- **Fonts:** Space Grotesk (headings) + IBM Plex Sans (body). Never Inter or Roboto.
+- **Never name the founders** on the public site.
+- No pricing, testimonials, team/about page, blog, pop-ups, or chat widgets in v1.
+
+## Contact details on the site
+
+- Email: `quantumintelligenceworks@gmail.com`
+- Phone: `(219) 608-4623`
+
+To change them, search-and-replace both values across the three HTML files. They appear in
+the footer of every page, the contact page, and the JSON-LD block in `index.html`.
+
+## Local preview
+
+No tooling required — double-click `index.html`. For clean relative links you can also run
+the included PowerShell server from the repo root:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File serve-site.ps1   # serves http://localhost:4173
+```
+
+## Deploy
+
+GitHub Pages. Full step-by-step (including DNS values for `quantumai.io`) is in
+`../docs/LAUNCH_RUNBOOK.md`.
