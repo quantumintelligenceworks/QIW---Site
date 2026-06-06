@@ -71,6 +71,20 @@
 }
 .brand { display: inline-flex; align-items: center; gap: var(--space-3); }
 .brand__mark { width: 30px; height: 30px; flex: 0 0 auto; }
+
+/* Crest badge — the logo. Small white medallion holding the crest, on the dark nav/footer. */
+.brand__badge {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 42%, #F5F5F2 0 60%, #C8C8C8 100%);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 0 1px rgba(0, 58, 43, 0.45);
+  overflow: hidden;
+}
+.brand__badge img { width: 86%; height: 86%; object-fit: contain; }
 .brand__name {
   font-family: var(--font-display);
   font-weight: var(--weight-bold);
