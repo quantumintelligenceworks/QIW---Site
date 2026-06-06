@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://quantumai.io/sitemap.xml
+Sitemap: https://quantumintelligenceworks.github.io/QIW---Site/sitemap.xml
