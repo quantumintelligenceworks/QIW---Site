@@ -94,10 +94,11 @@
 }
 .brand__name b { color: var(--color-red); }
 
-.nav__links { display: none; }
+/* Links visible on mobile too (short labels) so phone users can navigate from the top */
+.nav__links { display: inline-flex; align-items: center; gap: var(--space-4); }
 .nav__links a {
   font-family: var(--font-body);
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   color: var(--text-muted);
   transition: color var(--duration-base) var(--ease-out);
 }
