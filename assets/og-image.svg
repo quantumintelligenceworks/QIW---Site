@@ -9,7 +9,7 @@
   <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#003A2B" stroke-width="2" rx="14"/>
 
   <!-- Orbital mark -->
-  <g transform="translate(600,210)">
+  <g transform="translate(600,195)">
     <circle cx="0" cy="0" r="58" fill="none" stroke="#C8C8C8" stroke-width="6"/>
     <ellipse cx="0" cy="0" rx="78" ry="31" fill="none" stroke="#A32638" stroke-width="5" transform="rotate(-30)"/>
     <circle cx="62" cy="-36" r="9" fill="#A32638"/>
@@ -17,14 +17,16 @@
   </g>
 
   <!-- Wordmark -->
-  <text x="600" y="380" text-anchor="middle" font-family="Space Grotesk, Arial, sans-serif"
-        font-size="92" font-weight="700" letter-spacing="-2" fill="#F5F5F2">Quantum<tspan fill="#A32638">AI</tspan></text>
+  <text x="600" y="372" text-anchor="middle" font-family="Space Grotesk, Arial, sans-serif"
+        font-size="104" font-weight="700" letter-spacing="6" fill="#F5F5F2">QIW</text>
+  <text x="600" y="420" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif"
+        font-size="26" fill="#C8C8C8" letter-spacing="6">QUANTUM INTELLIGENCE WORKS</text>
 
   <!-- Tagline -->
-  <text x="600" y="440" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif"
-        font-size="30" fill="#C8C8C8">Engineering the Future of Intelligence.</text>
+  <text x="600" y="478" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif"
+        font-size="28" fill="#C8C8C8">Engineering the Future of Intelligence.</text>
 
   <!-- Footer line -->
-  <text x="600" y="520" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif"
-        font-size="22" fill="#C8C8C8" letter-spacing="2">CUSTOM WEBSITES · INFRASTRUCTURE · AI AUTOMATION</text>
+  <text x="600" y="535" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif"
+        font-size="22" fill="#C8C8C8" letter-spacing="2">WEBSITES · APPS · BUSINESS INFRASTRUCTURE</text>
 </svg>

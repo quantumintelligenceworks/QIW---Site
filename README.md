@@ -1,9 +1,9 @@
-# QuantumAI — Production Website (v1)
+# QIW — Production Website (v1)
 
-The public marketing site for **QuantumAI** (legal entity: Quantum Intelligence Works LLC).
-One job: turn a cold-email prospect into a 15-minute discovery call.
+The public marketing site for **QIW — Quantum Intelligence Works** (legal entity: Quantum
+Intelligence Works LLC). One job: turn a cold-email prospect into a 15-minute discovery call.
 
-**Live goal:** sell custom websites, infrastructure, and AI automation to local businesses
+**Live goal:** sell custom websites, web apps, and business infrastructure to local businesses
 across Chicago, West Palm Beach, and Northwest Indiana.
 
 ---
@@ -24,11 +24,11 @@ GitHub Pages and the easiest for a non-developer to edit later.
 | `contact.html` | `/contact.html` | Direct contact — email + phone (no form in v1) |
 | `404.html` | any missing page | On-brand error page |
 
-## Services offered at launch
+## Services offered (rebranded 2026-06-10 — QIW, build-focused)
 
-1. **Startup Website Build** — Website & Web App
-2. **Tech Infrastructure Consulting** — Infrastructure & Integrations
-3. **AI Automation Agent** — Custom AI Models & Agents
+1. **Website Build** — Custom Websites
+2. **App Build** — Web Apps & Internal Tools
+3. **Business Infrastructure** — Infrastructure & Integrations
 
 > These are the v1 offerings. Add or change services by editing the cards in `index.html`
 > and the deep-dives in `services.html`. See `../docs/LAUNCH_RUNBOOK.md`.
