@@ -66,7 +66,7 @@ site/
 - Email: `quantumintelligenceworks@gmail.com`
 - Sales phone: `(219) 323-5295`
 - Business phone: `(219) 608-4623`
-- Intake form: Formspree endpoint `https://formspree.io/f/xojznjqy` (plain HTML POST
+- Intake form: Formspree endpoint `https://formspree.io/f/xpqejrjo` (plain HTML POST
   fallback + `@formspree/ajax` CDN enhancement on `contact.html`)
 
 To change them, search-and-replace the values across the three HTML files. They appear in
