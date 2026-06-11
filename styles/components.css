@@ -327,7 +327,8 @@
 .contact-card:hover { border-color: rgba(163, 38, 56, 0.4); transform: translateY(-2px); }
 .contact-card .tag { color: var(--color-paper); display: block; }   /* label always above the value; was red (~2.6:1, fails AA) — red reserved for CTAs */
 .contact-card a {
-  display: inline-block;
+  display: block;
+  width: fit-content;
   max-width: 100%;
   margin-top: var(--space-4);
   font-family: var(--font-display);
@@ -341,7 +342,130 @@
 }
 .contact-card a:hover { border-color: var(--color-paper); }
 .contact-card p { margin-top: var(--space-3); font-size: var(--text-base); }
+.contact-card__label { font-size: var(--text-sm); }
+.contact-card p.contact-card__label { margin-top: var(--space-2); }
+.contact-card__label + a { margin-top: var(--space-5); }
 .contact-note { margin-top: var(--space-12); font-size: var(--text-base); color: var(--text-muted); }
+
+/* ── Intake form (contact page) ─────────────────────────── */
+.intake { max-width: 640px; }
+.intake h2 { font-size: var(--text-3xl); margin-top: var(--space-4); }
+.form { margin-top: var(--space-8); display: grid; gap: var(--space-6); }
+.form__row { display: grid; gap: var(--space-6); }
+@media (min-width: 720px) {
+  .form__row { grid-template-columns: repeat(2, 1fr); }
+}
+.form__field { display: grid; gap: var(--space-2); }
+.form__field label {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-paper);
+}
+.form__field input,
+.form__field textarea {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-paper);
+  transition: border-color var(--duration-base) var(--ease-out);
+}
+.form__field input:hover,
+.form__field textarea:hover { border-color: var(--color-fog); }
+.form__field input:focus-visible,
+.form__field textarea:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}
+.form__field textarea { resize: vertical; min-height: 140px; }
+.form__field ::placeholder { color: var(--text-muted); opacity: 0.75; }
+.form__field select {
+  width: 100%;
+  padding: var(--space-3) var(--space-10) var(--space-3) var(--space-4);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-paper);
+  color-scheme: dark;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23C8C8C8' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  transition: border-color var(--duration-base) var(--ease-out);
+  cursor: pointer;
+}
+.form__field select:hover { border-color: var(--color-fog); }
+.form__field select:focus-visible { outline: 2px solid var(--color-red); outline-offset: 2px; }
+.form .btn { justify-self: start; }
+.form__note { font-size: var(--text-sm); color: var(--text-muted); }
+
+/* Service picker — radio choice cards */
+.form__choices { border: 0; padding: 0; margin: 0; }
+.form__choices legend {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-paper);
+}
+.choice-grid { display: grid; gap: var(--space-3); margin-top: var(--space-3); }
+@media (min-width: 720px) {
+  .choice-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.choice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color var(--duration-base) var(--ease-out);
+}
+.choice:hover { border-color: var(--color-fog); }
+.choice:has(input:checked) { border-color: rgba(163, 38, 56, 0.65); }
+.choice input {
+  accent-color: var(--color-red);
+  margin-top: 4px;
+  flex: 0 0 auto;
+}
+.choice input:focus-visible { outline: 2px solid var(--color-red); outline-offset: 2px; }
+.choice b {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-base);
+  color: var(--color-paper);
+}
+.choice small { display: block; margin-top: 2px; font-size: var(--text-xs); color: var(--text-muted); }
+
+/* Formspree AJAX status + field errors (hidden while empty) */
+.form__status {
+  margin-top: var(--space-6);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--color-green);
+  border-radius: 8px;
+  background: var(--bg-surface);
+  font-size: var(--text-base);
+  color: var(--color-paper);
+}
+.form__status--error { border-left-color: var(--color-red); }
+.form__status:empty { display: none; }
+.form__err { font-size: var(--text-sm); color: var(--color-paper); }
+.form__err:not(:empty) { padding-left: var(--space-3); border-left: 3px solid var(--color-red); }
+.form__err:empty { display: none; }
 
 /* ── 404 ────────────────────────────────────────────────── */
 .error-page {

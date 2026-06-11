@@ -21,7 +21,7 @@ GitHub Pages and the easiest for a non-developer to edit later.
 |---|---|---|
 | `index.html` | `/` | Hero, problem, 3 services, how-it-works, CTA |
 | `services.html` | `/services.html` | Three service deep-dives + CTA |
-| `contact.html` | `/contact.html` | Direct contact — email + phone (no form in v1) |
+| `contact.html` | `/contact.html` | Intake form (Formspree) + direct email & phone |
 | `404.html` | any missing page | On-brand error page |
 
 ## Services offered (rebranded 2026-06-10 — QIW, build-focused)
@@ -64,9 +64,12 @@ site/
 ## Contact details on the site
 
 - Email: `quantumintelligenceworks@gmail.com`
-- Phone: `(219) 608-4623`
+- Sales phone: `(219) 323-5295`
+- Business phone: `(219) 608-4623`
+- Intake form: Formspree endpoint `https://formspree.io/f/xojznjqy` (plain HTML POST
+  fallback + `@formspree/ajax` CDN enhancement on `contact.html`)
 
-To change them, search-and-replace both values across the three HTML files. They appear in
+To change them, search-and-replace the values across the three HTML files. They appear in
 the footer of every page, the contact page, and the JSON-LD block in `index.html`.
 
 ## Local preview

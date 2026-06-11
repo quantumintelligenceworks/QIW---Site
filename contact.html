@@ -56,12 +56,91 @@
       <div class="container">
         <p class="tag">Contact</p>
         <h1>Start the conversation.</h1>
-        <p>Tell us what you're working on. We'll tell you what's possible. Reach us directly by email or phone — a 30-minute discovery call is all it takes to map what we'd build for your business.</p>
+        <p>Tell us what you're working on. We'll tell you what's possible. Send the form below or reach us directly — a 30-minute discovery call is all it takes to map what we'd build for your business.</p>
+      </div>
+    </section>
+
+    <!-- INTAKE FORM -->
+    <section>
+      <div class="container">
+        <div class="intake">
+          <p class="tag">Intake Form</p>
+          <h2 id="intake-title">Tell us what you're trying to solve.</h2>
+          <div class="form__status" data-fs-success></div>
+          <div class="form__status form__status--error" data-fs-error></div>
+          <form id="intake-form" class="form" aria-labelledby="intake-title" action="https://formspree.io/f/xojznjqy" method="POST">
+            <!-- Formspree config (not visible to visitors) -->
+            <input type="hidden" name="_subject" value="New intake — QIW website" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <fieldset class="form__choices">
+              <legend>What do you want built?</legend>
+              <div class="choice-grid">
+                <label class="choice">
+                  <input type="radio" name="service" value="Website Build" required />
+                  <span><b>Website Build</b><small>Custom Websites</small></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="service" value="App Build" />
+                  <span><b>App Build</b><small>Web Apps &amp; Internal Tools</small></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="service" value="Business Infrastructure" />
+                  <span><b>Business Infrastructure</b><small>Infrastructure &amp; Integrations</small></span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="service" value="Not sure yet" />
+                  <span><b>Not Sure Yet</b><small>We'll map it on the call</small></span>
+                </label>
+              </div>
+              <span class="form__err" data-fs-error="service"></span>
+            </fieldset>
+
+            <div class="form__row">
+              <div class="form__field">
+                <label for="f-name">Your Name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required data-fs-field />
+                <span class="form__err" data-fs-error="name"></span>
+              </div>
+              <div class="form__field">
+                <label for="f-company">Company</label>
+                <input id="f-company" name="company" type="text" autocomplete="organization" />
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__field">
+                <label for="f-email">Email Address</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required data-fs-field />
+                <span class="form__err" data-fs-error="email"></span>
+              </div>
+              <div class="form__field">
+                <label for="f-phone">Phone</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="form__field">
+              <label for="f-reach">Best way to reach you</label>
+              <select id="f-reach" name="preferred_contact">
+                <option value="Email" selected>Email</option>
+                <option value="Phone call">Phone call</option>
+                <option value="Text">Text</option>
+              </select>
+            </div>
+            <div class="form__field">
+              <label for="f-message">What are you trying to solve?</label>
+              <textarea id="f-message" name="message" rows="5" required placeholder="Describe the problem or opportunity you're thinking about. There are no wrong answers." data-fs-field></textarea>
+              <span class="form__err" data-fs-error="message"></span>
+            </div>
+            <button class="btn btn--primary btn--lg" type="submit" data-fs-submit-btn>Send It</button>
+            <p class="form__note">Goes straight to our inbox. We reply within one business day.</p>
+          </form>
+        </div>
       </div>
     </section>
 
     <section>
       <div class="container">
+        <p class="tag">Or Reach Us Directly</p>
         <div class="contact-block">
           <article class="contact-card">
             <p class="tag">Email</p>
@@ -70,11 +149,14 @@
           </article>
           <article class="contact-card">
             <p class="tag">Phone</p>
+            <a href="tel:+12193235295">(219) 323-5295</a>
+            <p class="contact-card__label">Sales — call or text</p>
             <a href="tel:+12196084623">(219) 608-4623</a>
-            <p>Call or text. We serve Chicago, West Palm Beach, and Northwest Indiana.</p>
+            <p class="contact-card__label">Business line</p>
+            <p>We serve Chicago, West Palm Beach, and Northwest Indiana.</p>
           </article>
         </div>
-        <p class="contact-note">Prefer to write a few lines first? Email us a sentence on the problem or opportunity you're thinking about — there are no wrong answers. We come with questions, not a pitch deck.</p>
+        <p class="contact-note">However you reach out, there are no wrong answers — a sentence on the problem or opportunity is enough. We come with questions, not a pitch deck.</p>
       </div>
     </section>
   </main>
@@ -96,10 +178,19 @@
         Engineering the Future of Intelligence.<br>
         Chicago · West Palm Beach · Valparaiso, IN<br>
         <a href="mailto:quantumintelligenceworks@gmail.com">quantumintelligenceworks@gmail.com</a><br>
-        <a href="tel:+12196084623">(219) 608-4623</a><br>
+        Sales <a href="tel:+12193235295">(219) 323-5295</a><br>
+        Business <a href="tel:+12196084623">(219) 608-4623</a><br>
         © 2026 Quantum Intelligence Works LLC. All rights reserved.
       </div>
     </div>
   </footer>
+
+  <!-- Formspree AJAX enhancement: inline success/error states, button disable on submit.
+       The form's action attribute still posts normally if this script doesn't load. -->
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#intake-form', formId: 'xojznjqy' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
