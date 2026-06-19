@@ -25,10 +25,10 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="apple-touch-icon" href="assets/qiw-crest.png" />
 
-  <!-- Fonts: Space Grotesk (display) + IBM Plex Sans (body) -->
-  <link rel="preload" href="assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="assets/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="styles/fonts.css" />
+  <!-- Fonts: Cinzel (display) + Inter (body) — Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles/tokens.css" />
   <link rel="stylesheet" href="styles/reset.css" />
@@ -51,7 +51,7 @@
       { "@type": "ContactPoint", "telephone": "+1-219-323-5295", "contactType": "sales" },
       { "@type": "ContactPoint", "telephone": "+1-219-608-4623", "contactType": "customer service" }
     ],
-    "areaServed": ["Chicago, IL", "West Palm Beach, FL", "Valparaiso, IN"],
+    "areaServed": "US",
     "knowsAbout": ["Custom website development", "Custom web app development", "Business infrastructure consulting"]
   }
   </script>
@@ -63,7 +63,7 @@
   <header class="nav">
     <div class="container nav__inner">
       <a class="brand" href="index.html" aria-label="QIW home">
-        <span class="brand__badge"><img src="assets/qiw-crest.png" width="40" height="40" alt="" /></span><span class="brand__name">QIW</span>
+        <img src="assets/qiw-mark.svg" class="brand__mark" width="30" height="36" alt="" /><span class="brand__name">QIW</span>
       </a>
       <nav class="nav__links" aria-label="Primary">
         <a href="services.html">Services</a>
@@ -86,7 +86,7 @@
           <a class="btn btn--primary btn--lg" href="contact.html">Book a Discovery Call</a>
           <a class="btn btn--ghost btn--lg" href="services.html">See What We Build</a>
         </div>
-        <p class="hero__meta"><span class="hero__dot" aria-hidden="true"></span> Now onboarding local businesses across Chicago, West Palm Beach &amp; Northwest Indiana.</p>
+        <p class="hero__meta"><span class="hero__dot" aria-hidden="true"></span> Now accepting clients nationwide.</p>
       </div>
     </section>
 
@@ -179,7 +179,7 @@
     <div class="container footer__grid">
       <div>
         <a class="brand" href="index.html" aria-label="QIW home">
-          <span class="brand__badge"><img src="assets/qiw-crest.png" width="40" height="40" alt="" /></span><span class="brand__name">QIW</span>
+          <img src="assets/qiw-mark.svg" class="brand__mark" width="30" height="36" alt="" /><span class="brand__name">QIW</span>
         </a>
         <p class="footer__tagline">Built by students inspired by the same background — engineering, finance, and the conviction that the next operating layer of business is intelligent.</p>
         <nav class="footer__links" aria-label="Footer">
@@ -190,7 +190,6 @@
       <div class="footer__meta">
         <b>QIW — Quantum Intelligence Works.</b><br>
         Engineering the Future of Intelligence.<br>
-        Chicago · West Palm Beach · Valparaiso, IN<br>
         <a href="mailto:quantumintelligenceworks@gmail.com">quantumintelligenceworks@gmail.com</a><br>
         Sales <a href="tel:+12193235295">(219) 323-5295</a><br>
         Business <a href="tel:+12196084623">(219) 608-4623</a><br>

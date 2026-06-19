@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120">
+  <defs>
+    <clipPath id="c">
+      <path d="M14,16 H86 V70 C86,92 68,108 50,118 C32,108 14,92 14,70 Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect x="14" y="16" width="36" height="48" fill="#143D28"/>
+    <rect x="50" y="16" width="36" height="48" fill="#141414"/>
+    <rect x="14" y="64" width="36" height="60" fill="#141414"/>
+    <rect x="50" y="64" width="36" height="60" fill="#143D28"/>
+  </g>
+  <line x1="50" y1="16" x2="50" y2="118" stroke="#C01F2E" stroke-width="3"/>
+  <line x1="14" y1="64" x2="86" y2="64" stroke="#C01F2E" stroke-width="3"/>
+  <path d="M14,16 H86 V70 C86,92 68,108 50,118 C32,108 14,92 14,70 Z" fill="none" stroke="#C01F2E" stroke-width="5"/>
+  <text x="50" y="72" text-anchor="middle" font-family="Cinzel,Georgia,'Times New Roman',serif" font-size="19" font-weight="700" letter-spacing="1" fill="#E7EDE9">QIW</text>
+</svg>
