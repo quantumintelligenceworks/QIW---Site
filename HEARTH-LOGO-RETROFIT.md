@@ -5,18 +5,15 @@
 ## 1. The app
 `design/v3-logo` already covers the app icons, favicon, `Logo` component and welcome screen (its `assets/brand/README.md` lists every spot). The steps are: commit, open a PR, and wait for Chase's "merge". Then rebuild app.hearthqiw.online (`npm run app:web`, then `npm run app:publish`), which also needs his OK.
 
-## Status (2026-11-09)
+## Status (2026-11-09): sections 1 and 2 done
 
-- **The final mark:**
-  - The H, with its left leg narrowing into a QIW-heraldic cross pattée.
-  - The right leg bending into the QIW crest Q's tail (with its small hook).
-  - A small node past the tail's tip.
-  - One colour throughout.
-- **App:** [hearth-qiw/hearth-app#126](https://github.com/hearth-qiw/hearth-app/pull/126) is open, branch `design/v3-logo`. Merging and the app.hearthqiw.online rebuild need Chase's OK.
-- **This site:**
-  - Section 2's files are refreshed to the final mark.
-  - `og-image.png` is re-rendered at 1200 × 630.
-  - Ready to publish, but **not published yet**.
+- **The final mark** (HearthApp a6b648a):
+  - **Left side, Hearth:** Lincoln and Gutenberg Textura: a Latin cross with thorn-tipped, woven arms, a diamond pen-dot and a rail split.
+  - **Right side, QIW:** Paul Revere: the QIW Q swash, plus a node in IU Crimson.
+  - **Colour:** one colour plus that single accent.
+- **App:** [hearth-qiw/hearth-app#126](https://github.com/hearth-qiw/hearth-app/pull/126) was merged into v2-build (1e4f422) by the Hearth session, which is also rebuilding and publishing app.hearthqiw.online.
+- **This site: PUBLISHED.** QIW---Site 7d10a79 → hearth-qiw/site 5cdbabd. Only the five `hearth/*` files changed; the line-ending-only diffs were discarded. The live files match byte for byte.
+- **Left:** section 3 (the Base44 Hub's Hearth logo, if it has one, and the App Store screenshots).
 
 ## 2. hearthqiw.online (this folder)
 
