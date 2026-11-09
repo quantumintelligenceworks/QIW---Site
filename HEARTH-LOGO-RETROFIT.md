@@ -18,7 +18,7 @@
 **Check before publishing:**
 - The new SVGs keep the same `viewBox` proportions as the old ones (the header sizes them by height).
 - Hearth's pages keep Hearth's warm look. The cross is gold, never red.
-- Hearth's accent is now Crimson `#990000` (HearthApp brand README). The QIW pages stay Cardinal `#C41E3A`.
+- **Colours (Chase, 2026-11-09): IU red (Crimson `#990000`) for Hearth, Cardinal `#C41E3A` for QIW.** IU red is an accent around the mark (buttons, highlights); the mark itself stays one colour. Never put IU red on QIW pages or Cardinal on Hearth pages.
 - Preview with `qiw-site` (port 4350) at 390 px and 1280 px, in light and dark.
 
 **Publish:**
