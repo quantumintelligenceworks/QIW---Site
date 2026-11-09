@@ -83,5 +83,10 @@ powershell -ExecutionPolicy Bypass -File serve-site.ps1   # serves http://localh
 
 ## Deploy
 
-GitHub Pages. Full step-by-step (including DNS values for `quantumai.io`) is in
-`../docs/LAUNCH_RUNBOOK.md`.
+**Live address (since 2026-11-08): https://hearthqiw.online**, served by GitHub Pages from `hearth-qiw/site`. This folder is the source of truth; that repo only receives copies.
+
+1. Change the site here and preview it (`qiw-site` in `.claude/launch.json`, port 4350).
+2. Copy it into a clone of `hearth-qiw/site`: `node tools/sync-to-hearthqiw.mjs <path to the clone>`.
+3. Review the diff there, then commit to its `main` (that publishes it; Chase approves first).
+
+Hearth lives at `/hearth/`; its Privacy, Terms and Support pages stay at `/privacy/`, `/terms/` and `/support/` (the App Store links to them). The old address (quantumintelligenceworks.github.io/QIW---Site) still serves this repo's `main`.

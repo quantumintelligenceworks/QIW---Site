@@ -70,7 +70,7 @@
   height: 68px;
 }
 .brand { display: inline-flex; align-items: center; gap: var(--space-3); }
-.brand__mark { width: 30px; height: 36px; flex: 0 0 auto; }
+.brand__mark { width: 38px; height: 44px; flex: 0 0 auto; }
 .brand__name {
   font-family: var(--font-display);
   font-weight: var(--weight-bold);
@@ -488,3 +488,15 @@
 .footer__links { display: flex; gap: var(--space-6); margin-top: var(--space-4); }
 .footer__links a { font-size: var(--text-sm); color: var(--text-muted); transition: color var(--duration-base) var(--ease-out); }
 .footer__links a:hover { color: var(--color-p
+/* Products (company products such as Hearth; add one card per product) */
+.products-grid {
+  display: grid;
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+@media (min-width: 768px) {
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.product-card { display: flex; flex-direction: column; align-items: flex-start; }
+.product-card__mark { width: 48px; height: 48px; margin-bottom: var(--space-4); }
+.product-card .btn { margin-top: var(--space-4); }
