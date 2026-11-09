@@ -12,6 +12,8 @@
 
 **2026-11-08 (Chase):** this site moves to **hearthqiw.online** and gains a **Products** section, with Hearth first at `/hearth/` (approved, despite rule 4 below). Start from `HANDOFF-company-site.md`.
 
+**2026-11-09 (Chase, ADR-028 in the Hearth repo):** the Hearth pages may name 988 as text, but nothing links to 911, 988 or any hotline (no `tel:`/`sms:`; `format-detection: telephone=no`). New Hearth logo: follow `HEARTH-LOGO-RETROFIT.md`.
+
 ---
 
 ## File Map (read these before writing code)
