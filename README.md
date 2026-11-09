@@ -89,4 +89,4 @@ powershell -ExecutionPolicy Bypass -File serve-site.ps1   # serves http://localh
 2. Copy it into a clone of `hearth-qiw/site`: `node tools/sync-to-hearthqiw.mjs <path to the clone>`.
 3. Review the diff there, then commit to its `main` (that publishes it; Chase approves first).
 
-Hearth lives at `/hearth/`; its Privacy, Terms and Support pages stay at `/privacy/`, `/terms/` and `/support/` (the App Store links to them). The old address (quantumintelligenceworks.github.io/QIW---Site) still serves this repo's `main`.
+Hearth lives at `/hearth/`; its Privacy, Terms and Support pages stay at `/privacy/`, `/terms/` and `/support/` (the App Store links to them). The old address (quantumintelligenceworks.github.io/QIW---Site) forwards to hearthqiw.online: this repo's GitHub Pages serves the `pages-redirect` branch (forwarding pages only, set 2026-11-09), so `main` stays the source of truth and is never served there.
