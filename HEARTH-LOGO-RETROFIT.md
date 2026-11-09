@@ -5,6 +5,19 @@
 ## 1. The app
 `design/v3-logo` already covers the app icons, favicon, `Logo` component and welcome screen (its `assets/brand/README.md` lists every spot). The steps are: commit, open a PR, and wait for Chase's "merge". Then rebuild app.hearthqiw.online (`npm run app:web`, then `npm run app:publish`), which also needs his OK.
 
+## Status (2026-11-09)
+
+- **The final mark:**
+  - The H, with its left leg narrowing into a QIW-heraldic cross pattée.
+  - The right leg bending into the QIW crest Q's tail (with its small hook).
+  - A small node past the tail's tip.
+  - One colour throughout.
+- **App:** [hearth-qiw/hearth-app#126](https://github.com/hearth-qiw/hearth-app/pull/126) is open, branch `design/v3-logo`. Merging and the app.hearthqiw.online rebuild need Chase's OK.
+- **This site:**
+  - Section 2's files are refreshed to the final mark.
+  - `og-image.png` is re-rendered at 1200 × 630.
+  - Ready to publish, but **not published yet**.
+
 ## 2. hearthqiw.online (this folder)
 
 | File here | Shown on | Replace with (from `HearthApp/assets/brand/`) |
