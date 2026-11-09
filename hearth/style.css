@@ -1,0 +1,101 @@
+/* Hearth site: tokens come from the app (src/lib/theme.ts). No third-party requests, no scripts. */
+:root {
+  --bg: #f4ead9;          /* cream */
+  --surface: #fffdf6;     /* creamHi */
+  --text: #231f19;        /* ink900 */
+  --muted: #54493a;       /* ink500, AA on cream */
+  --link: #806029;        /* goldInk, AA on cream/parchment */
+  --gold: #c0954e;
+  --border: #e8dcc4;      /* borderCream */
+  --note-bg: #ece5d8;     /* parchment */
+  --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #100c08;
+    --surface: #16120d;
+    --text: #fdf8ee;      /* paper */
+    --muted: #cfc4ae;
+    --link: #d2a85f;      /* gold2 */
+    --border: #2a2418;    /* borderDk */
+    --note-bg: #1c160f;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+.skip {
+  position: absolute; left: 1rem; top: -4rem; padding: .5rem .75rem;
+  background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 8px;
+}
+.skip:focus { top: 1rem; }
+
+.wrap { max-width: 42rem; margin: 0 auto; padding: 0 1rem; }
+
+header.site { padding: 1.25rem 0 .5rem; }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.brand { display: inline-flex; align-items: center; gap: .5rem; color: var(--text); text-decoration: none; font-family: var(--serif); font-size: 1.5rem; }
+.brand img { width: 2.25rem; height: 2.25rem; display: block; }
+header.site nav { display: flex; gap: 1rem; font-size: .95rem; }
+header.site nav a { color: var(--muted); text-decoration: none; padding: .25rem 0; }
+header.site nav a:hover, header.site nav a[aria-current="page"] { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+
+main { padding: 1.5rem 0 3rem; }
+h1, h2 { font-family: var(--serif); font-weight: 500; line-height: 1.2; }
+h1 { font-size: 2rem; margin: 0 0 1rem; }
+h2 { font-size: 1.4rem; margin: 2.25rem 0 .5rem; }
+h3 { font-size: 1.05rem; margin: 1.5rem 0 .25rem; }
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: .35rem; }
+a { color: var(--link); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, .button:focus-visible, summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+.lead { font-family: var(--serif); font-size: 1.35rem; line-height: 1.45; color: var(--text); margin-bottom: 1.25rem; }
+.muted { color: var(--muted); }
+.small { font-size: .9rem; }
+
+.hero { padding: 1.5rem 0 .5rem; }
+.hero h1 { font-size: 2.25rem; max-width: 18ch; }
+
+.button {
+  display: inline-block; padding: .7rem 1.25rem; border-radius: 999px;
+  background: var(--gold); color: #231f19; font-weight: 600; text-decoration: none;
+}
+.button:hover { background: #d2a85f; }
+
+.cards { display: grid; gap: .75rem; margin: 1.5rem 0; padding: 0; list-style: none; }
+.cards li { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1rem 1.1rem; margin: 0; }
+.cards strong { display: block; font-family: var(--serif); font-weight: 500; font-size: 1.15rem; margin-bottom: .15rem; }
+
+.note { background: var(--note-bg); border: 1px solid var(--border); border-radius: 12px; padding: .85rem 1rem; margin: 0 0 1.5rem; font-size: .95rem; color: var(--muted); }
+.note strong { color: var(--text); }
+
+details { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: .75rem 1rem; margin: 0 0 .6rem; }
+summary { cursor: pointer; font-weight: 600; }
+details[open] summary { margin-bottom: .5rem; }
+details p:last-child { margin-bottom: 0; }
+
+footer.site { border-top: 1px solid var(--border); padding: 1.5rem 0 2.5rem; font-size: .9rem; color: var(--muted); }
+footer.site .wrap { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; justify-content: space-between; }
+footer.site nav { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; }
+
+@media (min-width: 640px) {
+  body { font-size: 1.125rem; }
+  h1 { font-size: 2.4rem; }
+  .hero h1 { font-size: 3rem; }
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .button, a { transition: background-color .2s ease-out, color .2s ease-out; }
+}
