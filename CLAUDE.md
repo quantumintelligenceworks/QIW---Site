@@ -28,7 +28,7 @@
 
 ## Non-Negotiable Rules
 
-1. **Brand palette** — Heraldic Green `#143D28` (primary brand), Deep Forest `#0D2417` (dark hero/section backgrounds), Crest Red `#C01F2E` (accent/CTA), Ink Black `#141414` (card surfaces), Quantum Black `#0A0A0A` (base background). Neutrals: Sage Mist `#E7EDE9`, fog `#C8C8C8`. No other colors.
+1. **Brand palette** — Heraldic Green `#143D28` (primary brand), Deep Forest `#0D2417` (dark hero/section backgrounds), Cardinal Red `#C41E3A` (accent/CTA, buttons, links; Chase 2026-11-09), Crest Red `#C01F2E` (logo artwork only), Ink Black `#141414` (card surfaces), Quantum Black `#0A0A0A` (base background). Neutrals: Sage Mist `#E7EDE9`, fog `#C8C8C8`. No other colors.
 2. **Cinzel** (display/headings, weights 500–700) + **Inter** (body/UI, weights 400–700). Both loaded from Google Fonts CDN. No Space Grotesk or IBM Plex Sans.
 3. **Never name the founders** on any public-facing page.
 4. **Tier 1A services only** on v1, shown publicly as Website Build / App Build / Business Infrastructure. No AI service copy on the public site. No testimonials, no pricing, no analytics section.
